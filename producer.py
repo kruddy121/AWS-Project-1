@@ -71,7 +71,7 @@ def generate_event():
     )[0]
 
     return {
-        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S"),
         "user_id": random.choice(users),
         "ip_address": generate_ip(),
         "event_type": event_type,
